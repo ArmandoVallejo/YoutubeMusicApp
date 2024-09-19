@@ -46,6 +46,11 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.compose.material.*
+import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.rounded.Menu
+import androidx.compose.material.icons.rounded.Share
+import androidx.compose.material.icons.rounded.Star
 import com.example.interfazytm.ui.theme.InterfazYTMTheme
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
@@ -144,7 +149,7 @@ fun TopElements(){
                 .padding(10.dp)
         ){
             Icon(
-                imageVector = Icons.Default.Search,
+                imageVector = Icons.Rounded.Share,
                 contentDescription = "Search Icon",
                 tint = Color.White,
                 modifier = Modifier
@@ -166,7 +171,7 @@ fun TopElements(){
                 .padding(10.dp)
         ){
             Icon(
-                imageVector = Icons.Default.Search,
+                imageVector = Icons.Rounded.Menu,
                 contentDescription = "Search Icon",
                 tint = Color.White,
                 modifier = Modifier
@@ -189,7 +194,7 @@ fun TopElements(){
                 .padding(10.dp)
         ){
             Icon(
-                imageVector = Icons.Default.Search,
+                imageVector = Icons.Default.Face,
                 contentDescription = "Search Icon",
                 tint = Color.White,
                 modifier = Modifier
@@ -212,7 +217,7 @@ fun TopElements(){
                 .padding(10.dp)
         ){
             Icon(
-                imageVector = Icons.Default.Search,
+                imageVector = Icons.Rounded.Star,
                 contentDescription = "Search Icon",
                 tint = Color.White,
                 modifier = Modifier
@@ -1130,6 +1135,12 @@ fun Tendencias(){
 
         }
     }
+}
+
+@Preview
+@Composable
+fun BottomElement(){
+
 }
 
 
