@@ -1,5 +1,6 @@
 package com.example.interfazytm
 
+import android.annotation.SuppressLint
 import android.graphics.Paint.Align
 import android.hardware.lights.Light
 import android.os.Bundle
@@ -64,12 +65,14 @@ import androidx.compose.material.icons.rounded.Star
 import androidx.compose.material3.BottomAppBar
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.TextButton
+import androidx.compose.ui.focus.focusModifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.vectorResource
 //import com.example.interfazytm.ui.theme.InterfazYTMTheme
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 class MainActivity : ComponentActivity() {
+    @SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         //enableEdgeToEdge()
@@ -77,8 +80,6 @@ class MainActivity : ComponentActivity() {
             Scaffold(
                 bottomBar = {
                     BottomAppBar (
-                        modifier = Modifier
-                            .background(color = Color.Black)
                     ){
                         CustomBottomBar() //Barra inferior personalizada
                     }
@@ -421,7 +422,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(3.dp))
                                     .background(color = Color.DarkGray)
-                                    .width(130.dp)
+                                    .width(170.dp)
                             ) {
                                 Column(
                                     modifier = Modifier
@@ -443,7 +444,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(3.dp))
                                     .background(color = Color.DarkGray)
-                                    .width(130.dp)
+                                    .width(170.dp)
                             ) {
                                 Column(
                                     modifier = Modifier
@@ -465,7 +466,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(3.dp))
                                     .background(color = Color.DarkGray)
-                                    .width(130.dp)
+                                    .width(170.dp)
                             ) {
                                 Column(
                                     modifier = Modifier
@@ -495,7 +496,8 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(3.dp))
                                     .background(color = Color.DarkGray)
-                                    .width(130.dp)
+                                    .width(170.dp)
+
                             ) {
                                 Column(
                                     modifier = Modifier
@@ -517,7 +519,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(3.dp))
                                     .background(color = Color.DarkGray)
-                                    .width(130.dp)
+                                    .width(170.dp)
                             ) {
                                 Column(
                                     modifier = Modifier
@@ -539,7 +541,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(3.dp))
                                     .background(color = Color.DarkGray)
-                                    .width(130.dp)
+                                    .width(170.dp)
                             ) {
                                 Column(
                                     modifier = Modifier
@@ -569,7 +571,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(3.dp))
                                     .background(color = Color.DarkGray)
-                                    .width(130.dp)
+                                    .width(170.dp)
                             ) {
                                 Column(
                                     modifier = Modifier
@@ -591,7 +593,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(3.dp))
                                     .background(color = Color.DarkGray)
-                                    .width(130.dp)
+                                    .width(170.dp)
                             ) {
                                 Column(
                                     modifier = Modifier
@@ -613,7 +615,7 @@ class MainActivity : ComponentActivity() {
                                 modifier = Modifier
                                     .clip(RoundedCornerShape(3.dp))
                                     .background(color = Color.DarkGray)
-                                    .width(130.dp)
+                                    .width(170.dp)
                             ) {
                                 Column(
                                     modifier = Modifier
@@ -1215,7 +1217,7 @@ class MainActivity : ComponentActivity() {
             }
         }
 
-       // @Preview
+        @Preview
         @Composable
         fun CustomBottomBar() {
             Column(//Este column abarca la reproduccion y los iconos de abajo
