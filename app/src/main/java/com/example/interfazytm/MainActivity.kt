@@ -1,12 +1,15 @@
 package com.example.interfazytm
 
 import android.graphics.Paint.Align
+import android.hardware.lights.Light
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.collection.intIntMapOf
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -48,9 +51,19 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.material.*
 import androidx.compose.material.icons.filled.Face
+import androidx.compose.material.icons.filled.Home
+import androidx.compose.material.icons.filled.PlayArrow
+import androidx.compose.material.icons.filled.Share
+import androidx.compose.material.icons.rounded.Home
+import androidx.compose.material.icons.rounded.List
 import androidx.compose.material.icons.rounded.Menu
+import androidx.compose.material.icons.rounded.Refresh
+import androidx.compose.material.icons.rounded.Search
 import androidx.compose.material.icons.rounded.Share
 import androidx.compose.material.icons.rounded.Star
+import androidx.compose.material3.ButtonDefaults
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.vectorResource
 import com.example.interfazytm.ui.theme.InterfazYTMTheme
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
@@ -1139,8 +1152,143 @@ fun Tendencias(){
 
 @Preview
 @Composable
-fun BottomElement(){
+fun CustomBottomBar(){
+    Column(
+        modifier = Modifier
+            .fillMaxWidth()
+    ){
+        Row(//Ro contenedor para between
+            modifier = Modifier
+                .fillMaxWidth(),
+            horizontalArrangement = Arrangement.SpaceBetween
+        ) {
+            Row (
 
+            ){
+                Image(
+                    painter = painterResource(R.drawable.extassy),
+                    contentDescription = "Reproduccion",
+                    contentScale = ContentScale.Crop,
+                    modifier = Modifier
+                        .size(40.dp, 40.dp)
+                        .padding(7.dp)
+                )
+                Column (
+
+                ){
+                    Text(
+                        text = "Extassy Model",
+                        color = Color.White,
+                        fontSize = 15.sp,
+                        fontWeight = FontWeight.Bold,
+                        modifier = Modifier
+                            .padding(top=5.dp, start = 10.dp)
+
+                    )
+                    Text(
+                        text = "Junior H",
+                        color= colorResource(R.color.albumartist),
+                        fontWeight = FontWeight.Light,
+                        fontSize = 9.sp,
+                        modifier = Modifier
+                            .padding(start=10.dp)
+                    )
+
+
+                }
+            }
+            Row (
+                horizontalArrangement = Arrangement.SpaceEvenly,
+                modifier = Modifier
+                    .height(40.dp)
+                    .width(100.dp)
+                    .padding(top = 7.dp)
+            ){
+                
+                Icon(
+                    imageVector=Icons.Default.Share,
+                    contentDescription = "share",
+                    tint = Color.White,
+                    modifier = Modifier
+                        .size(20.dp)
+                        .padding(top = 0.dp)
+
+                )
+                Icon(
+                    imageVector=Icons.Default.PlayArrow,
+                    contentDescription = "share",
+                    tint = Color.White
+                )
+
+            }
+
+        }
+        Row (
+            horizontalArrangement = Arrangement.SpaceBetween
+        ){
+            Column(){
+                Button(
+                    onClick = { /*TODO*/ },
+                    modifier = Modifier
+                        .background(color=Color.Black)
+
+                ) {
+                    Image(painter = painterResource(R.drawable.casa), contentDescription = "casa")
+                }
+                Text(
+                    text = "Principal",
+                    fontWeight = FontWeight.Light,
+                    fontSize = 8.sp,
+                    color = Color.White
+                )
+
+            }
+            Column(){
+                Button(
+                    onClick = { /*TODO*/ },
+                    modifier = Modifier
+                        .background(color=Color.Black)
+
+                ) {
+                    Icon(
+                        imageVector = Icons.Default.PlayArrow,
+                        contentDescription = "arrow",
+                        tint = Color.White
+                    )
+                }
+                Text(
+                    text = "Samples",
+                    fontWeight = FontWeight.Light,
+                    fontSize = 8.sp,
+                    color = Color.White
+                )
+
+            }
+            Column(){
+                Button(
+                    onClick = { /*TODO*/ },
+                    modifier = Modifier
+                        .background(color=Color.Black)
+
+                ) {
+                    Image(painter = painterResource(R.drawable.brujula), contentDescription = "casa")
+                }
+                Text(
+                    text = "Busqueda",
+                    fontWeight = FontWeight.Light,
+                    fontSize = 8.sp,
+                    color = Color.White
+                )
+
+            }
+            Column(){
+
+            }
+            Column(){
+
+            }
+        }
+    }
 }
 
 
